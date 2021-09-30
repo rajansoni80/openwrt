@@ -1,4 +1,12 @@
 # Put your custom commands here that should be executed once
 # the system init finished. By default this file does nothing.
 
+echo "502" > /sys/class/gpio/export
+echo "out" > /sys/class/gpio/gpio502/direction
+echo "1" > /sys/class/gpio/gpio502/value
+
+echo "451" > /sys/class/gpio/export
+echo "out" > /sys/class/gpio/gpio451/direction
+echo "1" > /sys/class/gpio/gpio451/value
+
 exit 0
